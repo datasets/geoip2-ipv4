@@ -1,8 +1,20 @@
 {
   "name": "geoip2-ipv4",
   "title": "GeoIP2 - free IP geolocation database as of apr 21,2015. This dataset includes GeoLite2 data created by MaxMind, available from www.maxmind.com",
-  "license": "CC Zero",
-  "resources": [
+	"licenses": [{
+		"type": "CC0-1.0",
+		"url": "https://creativecommons.org/publicdomain/zero/1.0/"
+	}],
+	"sources": [{
+  	"name": "Maxmind GeoLite2",
+  	"web": "http://dev.maxmind.com/geoip/geoip2/geolite2/"
+	}],
+	"maintainers":[{
+  	"name": "Eduardo Bejar",
+	  "email": "edobejar@gmail.com",
+	  "web": "http://www.fundapi.org"
+	}],
+	"resources": [
     {
       "name": "geoip2-ipv4",
       "path": "data/geoip2-ipv4.csv",
