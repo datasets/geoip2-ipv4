@@ -1,69 +1,65 @@
 {
-  "name": "geoip2-ipv4",
-  "title": "GeoIP2 - free IP geolocation database as of apr 21,2015. This dataset includes GeoLite2 data created by MaxMind, available from www.maxmind.com",
+	"title": "IPv4 geolocation",
+	"name": "geoip2-ipv4",
 	"licenses": [{
 		"type": "CC0-1.0",
 		"url": "https://creativecommons.org/publicdomain/zero/1.0/"
 	}],
 	"sources": [{
-  	"name": "Maxmind GeoLite2",
-  	"web": "http://dev.maxmind.com/geoip/geoip2/geolite2/"
+  		"name": "Maxmind GeoLite2",
+  		"web": "http://dev.maxmind.com/geoip/geoip2/geolite2/"
 	}],
 	"maintainers":[{
-  	"name": "Eduardo Bejar",
-	  "email": "edobejar@gmail.com",
-	  "web": "http://www.fundapi.org"
+		"name": "Eduardo Bejar",
+		"email": "edobejar@gmail.com",
+		"web": "http://www.fundapi.org"
 	}],
-	"resources": [
-    {
-      "name": "geoip2-ipv4",
-      "path": "data/geoip2-ipv4.csv",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "schema": {
-        "fields": [
-          {
-            "name": "network",
-            "description": "This is the IPv4 network in CIDR format such as 2.21.92.0/29.",
-            "type": "string"
-          },
-          {
-            "name": "geoname_id",
-            "description": "A unique identifier for the network’s location as specified by GeoNames.",
-            "type": "integer"
-          },
-          {
-            "name": "continent_code",
-            "description": "The continent code for this IP. Possible codes are: AF - Africa, AS - Asia, EU - Europe, NA - North America, OC - Oceania, SA - South America",
-            "type": "string"
-          },
-          {
-            "name": "continent_name",
-            "description": "The continent name for this location",
-            "type": "tring"
-          },
-          {
-            "name": "country_iso_code",
-            "description": "A two-character ISO 3166-1 country code for the country associated with the location.",
-            "type": "string"
-          },
-          {
-            "name": "country_name",
-            "description": "The country name for this location.",
-            "type": "string"
-          },
-          {
-            "name": "is_anonymous_proxy",
-            "description": "A 1 if the network is an anonymous proxy, otherwise 0.",
-            "type": "boolean"
-          },
-          {
-            "name": "is_satellite_provider",
-            "description": "A 1 if the network is for a satellite provider that provides service to multiple countries, otherwise 0.",
-            "type": "boolean"
-          }
-        ]
-      }
-    }
-  ]
+	"resources": [{
+		"name": "geoip2-ipv4",
+		"path": "data/geoip2-ipv4.csv",
+		"format": "csv",
+		"mediatype": "text/csv",
+		"schema": {
+			"fields": [{
+				"name": "network",
+				"description": "This is the IPv4 network in CIDR format such as 2.21.92.0/29.",
+				"type": "string"
+			},
+			{
+				"name": "geoname_id",
+				"description": "A unique identifier for the network’s location as specified by GeoNames.",
+				"type": "integer"
+			},
+			{
+            	"name": "continent_code",
+				"description": "The continent code for this IP. Possible codes are: AF - Africa, AS - Asia, EU - Europe, NA - North America, OC - Oceania, SA - South America",
+				"type": "string"
+			},
+			{
+            	"name": "continent_name",
+				"description": "The continent name for this location",
+				"type": "string"
+			},
+			{
+            	"name": "country_iso_code",
+				"description": "A two-character ISO 3166-1 country code for the country associated with the location.",
+				"type": "string"
+			},
+			{
+            	"name": "country_name",
+				"description": "The country name for this location.",
+				"type": "string"
+			},
+			{
+            	"name": "is_anonymous_proxy",
+				"description": "A 1 if the network is an anonymous proxy, otherwise 0.",
+				"type": "boolean"
+			},
+			{
+            	"name": "is_satellite_provider",
+				"description": "A 1 if the network is for a satellite provider that provides service to multiple countries, otherwise 0.",
+				"type": "boolean"
+			}]
+		}
+	}]
 }

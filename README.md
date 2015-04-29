@@ -1,5 +1,5 @@
-# GeoIP2 - free IP geolocation database
-GeoIP2 - free IP geolocation database.
+# IPv4 geolocation datapackage
+Database of IPv4 address networks with their respective geographical location.
 
 ##Data
 Based on GeoLite2 Country Free Downloadable Databases as of Apr 21, 2015 http://dev.maxmind.com/geoip/geoip2/geolite2/
@@ -12,8 +12,6 @@ with the following considerations:
 - Where geoname_id was not available, registered_country_geoname_id was used.
 - Where geoname_id and registered_country_genoname_id where empty, geoname_id, continent_code, continent_name, country_iso_code and country_name are empty.
 
-##Original CSV License
-This dataset includes GeoLite2 data created by MaxMind, available from www.maxmind.com
-
-##Dataset License
-Creative Commons Zero
+##License
+Datapackage: Creative Commons Zero
+Original CSV: This dataset includes GeoLite2 data created by MaxMind, available from www.maxmind.com
