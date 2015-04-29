@@ -13,5 +13,4 @@ with the following considerations:
 - Where geoname_id and registered_country_genoname_id where empty, geoname_id, continent_code, continent_name, country_iso_code and country_name are empty.
 
 ##License
-Datapackage: Creative Commons Zero
-Original CSV: This dataset includes GeoLite2 data created by MaxMind, available from www.maxmind.com
+Datapackage: Creative Commons Zero / Original CSV: This dataset includes GeoLite2 data created by MaxMind, available from www.maxmind.com
