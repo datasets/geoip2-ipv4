@@ -2,8 +2,9 @@
 	"title": "IPv4 geolocation",
 	"name": "geoip2-ipv4",
 	"licenses": [{
-		"type": "CC0-1.0",
-		"url": "https://creativecommons.org/publicdomain/zero/1.0/"
+                "id": "odc-pddl",
+        	"url": "http://opendatacommons.org/licenses/pddl/",
+        	"name": "Public Domain Dedication and License"
 	}],
 	"sources": [{
   		"name": "Maxmind GeoLite2",
