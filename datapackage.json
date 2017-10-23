@@ -2,13 +2,13 @@
 	"title": "IPv4 geolocation",
 	"name": "geoip2-ipv4",
 	"licenses": [{
-                "id": "odc-pddl",
-        	"url": "http://opendatacommons.org/licenses/pddl/",
-        	"name": "Public Domain Dedication and License"
+    "name": "odc-pddl",
+  	"path": "http://opendatacommons.org/licenses/pddl/",
+  	"title": "Public Domain Dedication and License"
 	}],
 	"sources": [{
-  		"name": "Maxmind GeoLite2",
-  		"web": "http://dev.maxmind.com/geoip/geoip2/geolite2/"
+  		"title": "Maxmind GeoLite2",
+  		"path": "http://dev.maxmind.com/geoip/geoip2/geolite2/"
 	}],
 	"maintainers":[{
 		"name": "Eduardo Bejar",
@@ -28,7 +28,7 @@
 			},
 			{
 				"name": "geoname_id",
-				"description": "A unique identifier for the network’s location as specified by GeoNames.",
+				"description": "A unique identifier for the network's location as specified by GeoNames.",
 				"type": "integer"
 			},
 			{
