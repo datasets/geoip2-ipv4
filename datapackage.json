@@ -13,7 +13,7 @@
 	"maintainers":[{
 		"name": "Eduardo Bejar",
 		"email": "edobejar@gmail.com",
-		"web": "http://www.fundapi.org"
+		"path": "http://www.fundapi.org"
 	}],
 	"resources": [{
 		"name": "geoip2-ipv4",
