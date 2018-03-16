@@ -10,10 +10,11 @@
   		"title": "Maxmind GeoLite2",
   		"path": "http://dev.maxmind.com/geoip/geoip2/geolite2/"
 	}],
-	"maintainers":[{
+	"contributors":[{
 		"name": "Eduardo Bejar",
 		"email": "edobejar@gmail.com",
-		"path": "http://www.fundapi.org"
+		"path": "http://www.fundapi.org",
+		"role": "maintainer"
 	}],
 	"resources": [{
 		"name": "geoip2-ipv4",
