@@ -31,7 +31,7 @@ jobs:
       run: |
         pip install -r scripts/requirements.txt
 
-    - name: Run CPI Update Script
+    - name: Run geoip2-ipv4 Update Script
       env:
         MAXMIND_USERNAME: ${{ secrets.MAXMIND_USERNAME }}
         MAXMIND_PASSWORD: ${{ secrets.MAXMIND_PASSWORD }}   # Retrieve API key from GitHub Secrets
