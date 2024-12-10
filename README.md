@@ -16,11 +16,26 @@ GeoLite2-Country-Locations-en.csv
 with the following considerations:  
 
 - Where geoname_id was not available, registered_country_geoname_id was used.
-- Where geoname_id and registered_country_genoname_id where empty, geoname_id, continent_code, continent_name, country_iso_code and country_name are empty.
+- Where geoname_id and registered_country_geoname_id where empty, geoname_id, continent_code, continent_name, country_iso_code and country_name are empty.
 
 ## Preparation
 
-Original CSVs were imported into a MySQL database, then with a script an additional CSV was created combining Country names, locations and IPs. 
+Process is recorded and automated in python script:
+
+```bash
+# Install the requirements
+pip install -r scripts/requirements.txt
+
+# Make sure to add your own Account_ID and License_key password as env variables
+username = os.getenv('MAXMIND_USERNAME')
+password = os.getenv('MAXMIND_PASSWORD')
+
+# Run the code 
+python scripts/process.py
+```
+
+## Automation
+Up-to-date (auto-updates every week) geoip2-ipv4 dataset could be found on the datahub.io: https://datahub.io/core/geoip2-ipv4
 
 ## License
 
