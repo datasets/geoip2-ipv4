@@ -23,6 +23,16 @@ col_list = ['network',
             'country_name',
             'is_anonymous_proxy',
             'is_satellite_provider']
+col_types = [
+    'str',
+    'int',
+    'str',
+    'str',
+    'str',
+    'str',
+    'bool',
+    'bool'
+]
 
 def merge_data(ipv4_df,location_df):
     ipv4_df = ipv4_df[['network', 
@@ -50,7 +60,14 @@ def merge_data(ipv4_df,location_df):
         'continent_name', 
         'country_iso_code', 
         'country_name']] = ""
-    merged.columns = col_list
+    merged = merged[col_list]
+    for col, col_type in zip(col_list, col_types):
+        if col_type == 'str':
+            merged[col] = merged[col].astype(str)
+        elif col_type == 'int':
+            merged[col] = merged[col].astype(int)
+        elif col_type == 'bool':
+            merged[col] = merged[col].astype(int)
     merged = merged.drop_duplicates()
     merged.to_csv('data/geoip2-ipv4.csv', index=False)
 
