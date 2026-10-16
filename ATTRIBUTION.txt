@@ -1,0 +1,11 @@
+Attribution for geoip2-ipv4
+
+This product includes GeoLite Data created by MaxMind, available from https://www.maxmind.com.
+
+Contains information from the MaxMind GeoLite2 Country database (https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/), used under the GeoLite End User License Agreement (https://www.maxmind.com/en/geolite2/eula, updated 12 February 2026). The agreement says the copyrightable elements of the data are governed by Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/), and adds conditions of its own, for example that the data must not be disclosed to third parties without MaxMind's written consent except as that licence explicitly permits, and that older versions must be deleted within 30 days of a new release. How these combine is unclear.
+
+Changes made to the source data: the script scripts/process.py joins GeoLite2-Country-Blocks-IPv4.csv and GeoLite2-Country-Locations-en.csv on the GeoNames id. Where a network has no id, it uses the registered country id. It keeps eight columns, drops the other columns, and removes repeated rows.
+
+MaxMind provides the data "as is" and does not guarantee its accuracy.
+
+Not endorsed by, or affiliated with, MaxMind.

@@ -3,15 +3,21 @@
   "name": "geoip2-ipv4",
   "licenses": [
     {
-      "name": "odc-pddl",
-      "path": "http://opendatacommons.org/licenses/pddl/",
-      "title": "Public Domain Dedication and License"
+      "name": "ODC-PDDL-1.0",
+      "path": "https://opendatacommons.org/licenses/pddl/1.0/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0. Applies only to the maintainers' own work (the script, the column definitions and the file layout). It does not cover the MaxMind data; see README.md and ATTRIBUTION.txt."
+    },
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "title": "Creative Commons Attribution-ShareAlike 4.0 International. The MaxMind GeoLite End User License Agreement (https://www.maxmind.com/en/geolite2/eula) says the copyrightable elements of GeoLite data are governed by this licence, and adds conditions of its own. How they combine is unclear; see README.md and ATTRIBUTION.txt."
     }
   ],
   "sources": [
     {
-      "title": "Maxmind GeoLite2",
-      "path": "http://dev.maxmind.com/geoip/geoip2/geolite2/"
+      "name": "MaxMind GeoLite2",
+      "path": "https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/",
+      "title": "MaxMind GeoLite2 Country (CSV format)"
     }
   ],
   "contributors": [
@@ -37,12 +43,12 @@
           },
           {
             "name": "geoname_id",
-            "description": "A unique identifier for the network's location as specified by GeoNames.",
+            "description": "A unique identifier for the network's location as specified by GeoNames. It is the id of the country, or of a continent when MaxMind gives no country. Where MaxMind has no location for the network, the registered country is used; if there is none either, it is empty.",
             "type": "integer"
           },
           {
             "name": "continent_code",
-            "description": "The continent code for this IP. Possible codes are: AF - Africa, AS - Asia, EU - Europe, NA - North America, OC - Oceania, SA - South America",
+            "description": "The continent code for this IP: AF - Africa, AN - Antarctica, AS - Asia, EU - Europe, NA - North America, OC - Oceania, SA - South America. Empty when the network has no location. NA is the code for North America, not a missing value.",
             "type": "string"
           },
           {
@@ -52,22 +58,22 @@
           },
           {
             "name": "country_iso_code",
-            "description": "A two-character ISO 3166-1 country code for the country associated with the location.",
+            "description": "A two-character ISO 3166-1 country code for the country associated with the location. Empty when the location is only a continent or unknown. NA is the code for Namibia, not a missing value.",
             "type": "string"
           },
           {
             "name": "country_name",
-            "description": "The country name for this location.",
+            "description": "The country name for this location. Empty when the location is only a continent or unknown.",
             "type": "string"
           },
           {
             "name": "is_anonymous_proxy",
-            "description": "A 1 if the network is an anonymous proxy, otherwise 0.",
+            "description": "MaxMind's flag for an anonymous proxy: 1 or 0. In the data we checked every row is 0, so do not use it to detect proxies.",
             "type": "boolean"
           },
           {
             "name": "is_satellite_provider",
-            "description": "A 1 if the network is for a satellite provider that provides service to multiple countries, otherwise 0.",
+            "description": "MaxMind's flag for a satellite provider that serves several countries: 1 or 0. In the data we checked every row is 0.",
             "type": "boolean"
           }
         ]
