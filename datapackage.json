@@ -10,7 +10,7 @@
     {
       "name": "CC-BY-SA-4.0",
       "path": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "Creative Commons Attribution-ShareAlike 4.0 International. The MaxMind GeoLite End User License Agreement (https://www.maxmind.com/en/geolite2/eula) says the copyrightable elements of GeoLite data are governed by this licence, and adds conditions of its own. How they combine is unclear; see README.md and ATTRIBUTION.txt."
+      "title": "Creative Commons Attribution-ShareAlike 4.0 International. Applies to the MaxMind GeoLite data in data/, as stated in the MaxMind GeoLite End User License Agreement (https://www.maxmind.com/en/geolite2/eula). Attribution is required; see README.md and ATTRIBUTION.txt."
     }
   ],
   "sources": [

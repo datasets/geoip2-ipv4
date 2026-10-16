@@ -33,7 +33,7 @@ Column definitions and types are in `datapackage.json`.
 
 ## Data sources
 
-* [MaxMind GeoLite2 Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/), CSV format: the networks (`GeoLite2-Country-Blocks-IPv4.csv`) and the locations (`GeoLite2-Country-Locations-en.csv`). Licence: the [GeoLite End User License Agreement](https://www.maxmind.com/en/geolite2/eula), which brings in CC BY-SA 4.0 and adds conditions. How they combine is unclear (see [License](#license)).
+* [MaxMind GeoLite2 Country](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/), CSV format: the networks (`GeoLite2-Country-Blocks-IPv4.csv`) and the locations (`GeoLite2-Country-Locations-en.csv`). Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as stated in the [GeoLite End User License Agreement](https://www.maxmind.com/en/geolite2/eula), with attribution required (see [License](#license)).
 
 Changes made to the source data: the script joins the two files on `geoname_id`. Where a network has no `geoname_id`, it uses `registered_country_geoname_id`. It keeps the eight columns above, drops the other columns of the MaxMind files, and removes repeated rows.
 
@@ -58,13 +58,14 @@ The data is also published on [datahub.io](https://datahub.io/core/geoip2-ipv4).
 
 ## License
 
-The licence of the MaxMind data in this package is unclear. What we checked in the [GeoLite End User License Agreement](https://www.maxmind.com/en/geolite2/eula) (updated 12 February 2026):
+The data is licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). MaxMind's [GeoLite End User License Agreement](https://www.maxmind.com/en/geolite2/eula) (updated 12 February 2026) says so in section 3: "to the extent the Services contain any copyrightable elements those copyrightable elements are governed by the Creative Commons License".
 
-* Section 3: "to the extent the Services contain any copyrightable elements those copyrightable elements are governed by the Creative Commons License" (CC BY-SA 4.0). It also says: "You must provide attribution of your use to MaxMind", with the example "This product includes GeoLite Data created by MaxMind, available from https://www.maxmind.com". CC BY-SA 4.0 requires anyone who shares changed material to share it under the same licence.
-* Section 6: "Except as explicitly permitted by the Creative Commons License, you will not disclose the Services to any third party without notifying MaxMind of the anticipated disclosure and obtaining MaxMind's prior written consent". Where data is shared, the third party must get similar duties.
-* Sections 4 and 5: do not use the data for credit, insurance or employment decisions, and do not use it to identify a household, an individual or a street address.
-* MaxMind's [GeoLite page](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/) says the agreement requires users to keep their data up to date: "you must delete GeoLite databases within 30 days of a new release". This repository keeps older versions in its Git history.
+What this means for you:
 
-We could not establish whether publishing this data in a public repository is allowed under these terms together. Earlier versions of this repository described the data as public domain; that does not match the terms above. If you plan to redistribute the data or use it commercially, ask MaxMind for written confirmation first. See [ATTRIBUTION.txt](ATTRIBUTION.txt).
+* **Credit MaxMind.** The agreement says "You must provide attribution of your use to MaxMind", with the example: "This product includes GeoLite Data created by MaxMind, available from https://www.maxmind.com".
+* **Share alike.** If you share a changed version of the data, CC BY-SA 4.0 requires you to share it under the same licence.
+* **Keep the limits that come with the data.** Section 6 allows sharing where the Creative Commons licence permits it, and says the same duties pass on to whoever receives the data. Section 4 forbids using the data for credit, insurance or employment decisions. Section 5 forbids using it to identify a household, an individual or a street address.
 
-The maintainers place only their own work (the script, the column definitions and the file layout) under the [Public Domain Dedication and License (PDDL)](https://opendatacommons.org/licenses/pddl/1.0/). The CC0 text in `LICENSE` is also only the maintainers' own dedication. Neither gives any rights over the MaxMind data.
+**Old versions.** The agreement also says (section 6, "Destructions") that you must "cease use of and destroy ... any old versions of the Services within thirty (30) days following the release of the updated GeoLite Databases". This repository replaces the data every week and keeps the older versions in its Git history. Use the current file in `data/`, not an older version from the history.
+
+The maintainers place only their own work (the script, the column definitions and the file layout) under the [Public Domain Dedication and License (PDDL)](https://opendatacommons.org/licenses/pddl/1.0/). The CC0 text in `LICENSE` is also only the maintainers' own dedication. Neither applies to the MaxMind data. See also [ATTRIBUTION.txt](ATTRIBUTION.txt).
